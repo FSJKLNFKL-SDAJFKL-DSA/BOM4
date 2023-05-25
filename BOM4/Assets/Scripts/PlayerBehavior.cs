@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.InteropServices.WindowsRuntime;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -25,7 +24,7 @@ public class PlayerBehavior : MonoBehaviour
 
 
     //movement
-    void Move() 
+    void Move()
     {
         movementX = Input.GetAxisRaw("Horizontal");
         movementY = Input.GetAxisRaw("Vertical");
