@@ -26,7 +26,8 @@ public class GunBehavior : MonoBehaviour
 
     void Shoot()
     {
-        Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+        var cloneBullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+        Destroy(cloneBullet, 1f);
     }
 
     void Rotate()
