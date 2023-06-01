@@ -10,6 +10,7 @@ public class GunBehavior : MonoBehaviour
 
     public Transform firePoint;
     public Transform pivotPoint;
+    public Transform Gun;
     public Camera sceneCamera;
     private UnityEngine.Vector2 mousePosition;
     public Rigidbody2D rb;
@@ -22,11 +23,14 @@ public class GunBehavior : MonoBehaviour
             Shoot();
         }
         Rotate();   
+        rotateSprite();
     }
 
     void Shoot()
     {
-        Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+        var cloneBullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+        cloneBullet.transform.Rotate(0, 0, 90);
+        Destroy(cloneBullet, 1f);
     }
 
     void Rotate()
@@ -34,5 +38,16 @@ public class GunBehavior : MonoBehaviour
         mousePosition = sceneCamera.ScreenToWorldPoint(Input.mousePosition);
         UnityEngine.Vector2 aimdirection =  mousePosition - rb.position;
         pivotPoint.transform.up = aimdirection;
+    }
+
+    private void rotateSprite()
+    {
+        if (pivotPoint.transform.rotation.eulerAngles.z % 360 >= 0f && pivotPoint.transform.rotation.eulerAngles.z % 360 <= 180f)
+        {
+            Gun.transform.localScale = new UnityEngine.Vector3(1, 1, 1);
+        } else
+        {
+            Gun.transform.localScale = new UnityEngine.Vector3(1, -1, 1);
+        }
     }
 }

@@ -6,8 +6,13 @@ public class BulletBehavior : MonoBehaviour
 {
     public float speed = 20;
     public Rigidbody2D rb;
+    public Collider2D player;
+    private Collider2D bulletCollider2d;
     void Start()
     {
-        rb.velocity = transform.up * speed;
+        bulletCollider2d = GetComponent<Collider2D>();
+
+        rb.velocity = transform.right * speed;
+        Physics2D.IgnoreCollision(player, bulletCollider2d);
     }
 }
