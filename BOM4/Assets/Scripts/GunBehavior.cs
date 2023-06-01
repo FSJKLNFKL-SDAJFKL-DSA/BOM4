@@ -45,7 +45,8 @@ public class GunBehavior : MonoBehaviour
         if (pivotPoint.transform.rotation.eulerAngles.z % 360 >= 0f && pivotPoint.transform.rotation.eulerAngles.z % 360 <= 180f)
         {
             Gun.transform.localScale = new UnityEngine.Vector3(1, 1, 1);
-        } else
+        }
+        else
         {
             Gun.transform.localScale = new UnityEngine.Vector3(1, -1, 1);
         }
