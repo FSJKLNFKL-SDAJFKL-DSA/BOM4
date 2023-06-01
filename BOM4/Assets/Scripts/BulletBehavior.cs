@@ -12,7 +12,7 @@ public class BulletBehavior : MonoBehaviour
     {
         bulletCollider2d = GetComponent<Collider2D>();
 
-        rb.velocity = transform.up * speed;
+        rb.velocity = transform.right * speed;
         Physics2D.IgnoreCollision(player, bulletCollider2d);
     }
 }

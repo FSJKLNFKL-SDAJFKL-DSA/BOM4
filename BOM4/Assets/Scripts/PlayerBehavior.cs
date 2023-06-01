@@ -31,7 +31,7 @@ public class PlayerBehavior : MonoBehaviour
 
         transform.position += new Vector3(movementX, 0f) * movespeed * Time.deltaTime;
         transform.position += new Vector3(0f, movementY) * movespeed * Time.deltaTime;
-
+        
     }
 
     public void takeDamage(int damage)
