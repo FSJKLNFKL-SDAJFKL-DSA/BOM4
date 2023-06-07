@@ -12,7 +12,7 @@ public class loadingPrefs : MonoBehaviour
      
     [Header("Volume Settings")]
     [SerializeField] private TMP_Text voluemTextValue = null;
-    [SerializeField]private Slider SliderValue = null;
+    [SerializeField] private Slider SliderValue = null;
 
 
 

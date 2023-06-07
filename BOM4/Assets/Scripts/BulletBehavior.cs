@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BulletBehavior : MonoBehaviour
 {
-    public float speed = 20;
+    public float speed = 40;
     public Rigidbody2D rb;
     public Collider2D player;
     private Collider2D bulletCollider2d;
