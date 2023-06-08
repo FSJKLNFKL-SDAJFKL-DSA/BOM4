@@ -20,4 +20,6 @@ public class SimpleAIMovement : MonoBehaviour
     {
         agent.SetDestination(target.position);
     }
+
+    
 }
