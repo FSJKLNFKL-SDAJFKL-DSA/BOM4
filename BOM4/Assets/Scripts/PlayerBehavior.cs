@@ -9,11 +9,11 @@ public class PlayerBehavior : MonoBehaviour
     float movespeed;
     float movementX;
     float movementY;
-    public float health;
+    public float playerHealth;
 
     void Start()
     {
-        health = 100;
+        playerHealth = 100;
         movespeed = 15f;
     }
 
@@ -36,6 +36,6 @@ public class PlayerBehavior : MonoBehaviour
 
     public void takeDamage(int damage)
     {
-        health -= damage;
+        playerHealth -= damage;
     }
 }

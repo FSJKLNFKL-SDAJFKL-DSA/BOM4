@@ -5,24 +5,35 @@ using UnityEngine.AI;
 
 public class SimpleAIMovement : MonoBehaviour
 {
-    public float health;
+    public float enemyHealth;
+    public int damageAmount = 20;
 
     [SerializeField] Transform target;
     NavMeshAgent agent;
-    // Start is called before the first frame update
-    void Start()
 
+    void Start()
     {
+        enemyHealth = 20;
         agent = GetComponent<NavMeshAgent>();
         agent.updateRotation = false;
         agent.updateUpAxis = false;
     }
 
-    // Update is called once per frame
     void Update()
     {
         agent.SetDestination(target.position);
     }
 
-    
+    public void TakeDamage(int damage)
+    {
+        enemyHealth -= damage;
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            other.GetComponent<PlayerBehavior>().takeDamage(damageAmount);
+        }
+    }
 }
