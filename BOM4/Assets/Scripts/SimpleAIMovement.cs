@@ -5,10 +5,13 @@ using UnityEngine.AI;
 
 public class SimpleAIMovement : MonoBehaviour
 {
+    public float health;
+
     [SerializeField] Transform target;
     NavMeshAgent agent;
     // Start is called before the first frame update
     void Start()
+
     {
         agent = GetComponent<NavMeshAgent>();
         agent.updateRotation = false;
