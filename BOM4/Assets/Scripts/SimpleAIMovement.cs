@@ -25,7 +25,6 @@ public class SimpleAIMovement : MonoBehaviour
     {
         target = targetGO.GetComponent<Transform>();
         agent.SetDestination(target.position);
-        Debug.Log(target.position);
     }
 
     public void TakeDamage(int damage)
