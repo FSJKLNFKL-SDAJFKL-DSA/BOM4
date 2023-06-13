@@ -7,6 +7,7 @@ public class SimpleAIMovement : MonoBehaviour
 {
     public float enemyHealth;
     public int damageAmount = 20;
+    private float damageDelay = 1f;
 
     [SerializeField] Transform target;
     NavMeshAgent agent;
@@ -24,16 +25,24 @@ public class SimpleAIMovement : MonoBehaviour
         agent.SetDestination(target.position);
     }
 
-    public void TakeDamage(int damage)
+    public void takeDamageEmeny(int damage)
     {
         enemyHealth -= damage;
     }
 
-    void OnTriggerEnter(Collider other)
+    private void OnTriggerStay2D(Collider2D collision)
     {
-        if (other.CompareTag("Player"))
+        if (collision.CompareTag("Player"))
         {
-            other.GetComponent<PlayerBehavior>().takeDamage(damageAmount);
+            Debug.Log("gets here");
+            PlayerBehavior pb = collision.GetComponent<PlayerBehavior>();
+            //dealDamage(damageAmount, collision);  
+            StartCoroutine(dealDamage(pb));
         }
+    }
+    private IEnumerator dealDamage(PlayerBehavior pb)
+    {
+        yield return new WaitForSeconds(2.0f);
+        pb.takeDamage(90);
     }
 }
