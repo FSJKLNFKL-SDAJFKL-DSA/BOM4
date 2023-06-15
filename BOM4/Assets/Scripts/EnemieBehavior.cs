@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class SimpleAIMovement : MonoBehaviour
+public class EnemieBehavior : MonoBehaviour
 {
     public float enemyHealth;
     public int damageAmount = 20;
@@ -11,6 +11,7 @@ public class SimpleAIMovement : MonoBehaviour
     private Transform target;
     NavMeshAgent agent;
     public bool canHitPlayer = true;
+    private GameObject smobj;
 
     void Start()
     {
@@ -19,12 +20,19 @@ public class SimpleAIMovement : MonoBehaviour
         agent.updateRotation = false;
         agent.updateUpAxis = false;
         targetGO = GameObject.Find("Player");
+        smobj = GameObject.Find("Canvas");
     }
 
     void Update()
     {
         target = targetGO.GetComponent<Transform>();
         agent.SetDestination(target.position);
+        if (enemyHealth == 0)
+        {
+            Destroy(gameObject);
+            ScoreManager sm = smobj.GetComponent<ScoreManager>();
+            sm.score++;
+        }
     }
 
     public void takeDamageEmeny(int damage)
@@ -43,8 +51,8 @@ public class SimpleAIMovement : MonoBehaviour
     }
     private IEnumerator dealDamage(PlayerBehavior pb)
     {
-        pb.takeDamage(90);
-        yield return new WaitForSeconds(2.0f);
+        pb.takeDamage(20);
+        yield return new WaitForSeconds(3.0f);
         canHitPlayer = true;
     }
 }
