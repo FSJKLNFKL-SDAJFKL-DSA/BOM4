@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 1301057771395955713}
   m_Layer: 0
   m_Name: Enemy (1)
-  m_TagString: Untagged
+  m_TagString: Enemie
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -121,6 +121,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyHealth: 0
   damageAmount: 20
+  canHitPlayer: 1
 --- !u!61 &1301057771395955713
 BoxCollider2D:
   m_ObjectHideFlags: 0

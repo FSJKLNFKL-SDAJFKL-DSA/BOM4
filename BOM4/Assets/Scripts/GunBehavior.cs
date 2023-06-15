@@ -33,7 +33,7 @@ public class GunBehavior : MonoBehaviour
         Destroy(cloneBullet, 1f);
     }
 
-    void Rotate()
+    void Rotate()//
     {
         mousePosition = sceneCamera.ScreenToWorldPoint(Input.mousePosition);
         UnityEngine.Vector2 aimdirection =  mousePosition - rb.position;
