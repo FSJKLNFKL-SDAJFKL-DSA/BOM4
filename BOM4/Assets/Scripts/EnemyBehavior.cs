@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class SimpleAIMovement : MonoBehaviour
+public class EnemyBehavior : MonoBehaviour
 {
     public float enemyHealth;
     public int damageAmount = 20;
@@ -43,8 +43,8 @@ public class SimpleAIMovement : MonoBehaviour
     }
     private IEnumerator dealDamage(PlayerBehavior pb)
     {
-        pb.takeDamage(90);
-        yield return new WaitForSeconds(2.0f);
+        pb.takeDamage(20);
+        yield return new WaitForSeconds(3.0f);
         canHitPlayer = true;
     }
 }
