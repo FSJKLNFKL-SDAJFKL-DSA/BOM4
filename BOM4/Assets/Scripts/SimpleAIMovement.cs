@@ -12,6 +12,7 @@ public class SimpleAIMovement : MonoBehaviour
     private GameObject targetGO;
     private Transform target;
     NavMeshAgent agent;
+    public bool canHitPlayer = true;
 
     void Start()
     {
@@ -33,19 +34,21 @@ public class SimpleAIMovement : MonoBehaviour
         enemyHealth -= damage;
     }
 
-    private void OnTriggerStay2D(Collider2D collision)
+    private void OnCollisionStay2D(Collision2D collision)
     {
-        if (collision.CompareTag("Player"))
+        if (collision.collider.CompareTag("Player") && canHitPlayer == true)
         {
             Debug.Log("gets here");
-            PlayerBehavior pb = collision.GetComponent<PlayerBehavior>();
+            PlayerBehavior pb = collision.collider.GetComponent<PlayerBehavior>();
+            canHitPlayer = false;
             //dealDamage(damageAmount, collision);  
             StartCoroutine(dealDamage(pb));
         }
     }
     private IEnumerator dealDamage(PlayerBehavior pb)
     {
-        yield return new WaitForSeconds(2.0f);
         pb.takeDamage(90);
+        yield return new WaitForSeconds(2.0f);
+        canHitPlayer = true;
     }
 }
