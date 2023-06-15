@@ -38,10 +38,15 @@ public class SimpleAIMovement : MonoBehaviour
     {
         if (collision.collider.CompareTag("Player") && canHitPlayer == true)
         {
+<<<<<<< Updated upstream
             Debug.Log("gets here");
             PlayerBehavior pb = collision.collider.GetComponent<PlayerBehavior>();
             canHitPlayer = false;
             //dealDamage(damageAmount, collision);  
+=======
+            PlayerBehavior pb = collision.GetComponent<PlayerBehavior>();
+            //dealDamage(damageAmount, collision);      
+>>>>>>> Stashed changes
             StartCoroutine(dealDamage(pb));
         }
     }
