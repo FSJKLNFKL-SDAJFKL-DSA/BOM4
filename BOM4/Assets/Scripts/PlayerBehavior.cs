@@ -14,7 +14,7 @@ public class PlayerBehavior : MonoBehaviour
     void Start()
     {
         playerHealth = 100;
-        movespeed = 15f;
+        movespeed = 7f;
     }
 
     private void FixedUpdate()
@@ -32,6 +32,11 @@ public class PlayerBehavior : MonoBehaviour
         transform.position += new Vector3(movementX, 0f) * movespeed * Time.deltaTime;
         transform.position += new Vector3(0f, movementY) * movespeed * Time.deltaTime;
         
+    }
+
+    void capSpeed()
+    {
+
     }
 
     public void takeDamage(int damage)

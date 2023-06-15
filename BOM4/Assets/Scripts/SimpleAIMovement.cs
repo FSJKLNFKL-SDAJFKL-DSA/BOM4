@@ -7,8 +7,6 @@ public class SimpleAIMovement : MonoBehaviour
 {
     public float enemyHealth;
     public int damageAmount = 20;
-    private float damageDelay = 1f;
-
     private GameObject targetGO;
     private Transform target;
     NavMeshAgent agent;
@@ -38,15 +36,8 @@ public class SimpleAIMovement : MonoBehaviour
     {
         if (collision.collider.CompareTag("Player") && canHitPlayer == true)
         {
-<<<<<<< Updated upstream
-            Debug.Log("gets here");
             PlayerBehavior pb = collision.collider.GetComponent<PlayerBehavior>();
             canHitPlayer = false;
-            //dealDamage(damageAmount, collision);  
-=======
-            PlayerBehavior pb = collision.GetComponent<PlayerBehavior>();
-            //dealDamage(damageAmount, collision);      
->>>>>>> Stashed changes
             StartCoroutine(dealDamage(pb));
         }
     }

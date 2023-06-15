@@ -15,4 +15,12 @@ public class BulletBehavior : MonoBehaviour
         rb.velocity = transform.right * speed;
         Physics2D.IgnoreCollision(player, bulletCollider2d);
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        //if (collision.)
+        {
+
+        }
+    }
 }
