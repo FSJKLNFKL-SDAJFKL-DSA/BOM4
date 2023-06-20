@@ -3,11 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-<<<<<<<< HEAD:BOM4/Assets/Scripts/EnemyBehavior.cs
-public class EnemyBehavior : MonoBehaviour
-========
 public class EnemieBehavior : MonoBehaviour
->>>>>>>> acb0b4f22dc19714cc9af8c5175b7628d88a7755:BOM4/Assets/Scripts/EnemieBehavior.cs
 {
     public float enemyHealth;
     public int damageAmount = 20;
