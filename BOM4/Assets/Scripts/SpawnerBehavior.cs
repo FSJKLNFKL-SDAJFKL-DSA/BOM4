@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SpawnerBehavior : MonoBehaviour
 {
-
+    public int Spawncount;
     public GameObject Enemie;
     public float spawningTime;
     private int i;
@@ -22,7 +22,7 @@ public class SpawnerBehavior : MonoBehaviour
 
     void spawnEnemy()
     {
-        if (spawningTime >= 1f && i <= 10)
+        if (spawningTime >= 1f && i <= Spawncount)
         {
             var enemyClone = Instantiate(Enemie, transform);
             i++;
