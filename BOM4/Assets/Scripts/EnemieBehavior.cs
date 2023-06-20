@@ -15,7 +15,7 @@ public class EnemieBehavior : MonoBehaviour
 
     void Start()
     {
-        enemyHealth = 20;
+        enemyHealth = 40;
         agent = GetComponent<NavMeshAgent>();
         agent.updateRotation = false;
         agent.updateUpAxis = false;
