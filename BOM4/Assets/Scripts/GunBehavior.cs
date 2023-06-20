@@ -33,7 +33,7 @@ public class GunBehavior : MonoBehaviour
         Destroy(cloneBullet, 1f);
     }
 
-    void Rotate()
+    void Rotate()//
     {
         mousePosition = sceneCamera.ScreenToWorldPoint(Input.mousePosition);
         UnityEngine.Vector2 aimdirection =  mousePosition - rb.position;
@@ -44,11 +44,11 @@ public class GunBehavior : MonoBehaviour
     {
         if (pivotPoint.transform.rotation.eulerAngles.z % 360 >= 0f && pivotPoint.transform.rotation.eulerAngles.z % 360 <= 180f)
         {
-            Gun.transform.localScale = new UnityEngine.Vector3(1, 1, 1);
+            Gun.transform.localScale = new UnityEngine.Vector3(0.5f, 0.5f, 0.5f);
         }
         else
         {
-            Gun.transform.localScale = new UnityEngine.Vector3(1, -1, 1);
+            Gun.transform.localScale = new UnityEngine.Vector3(0.5f, -0.5f, 0.5f);
         }
     }
 }
