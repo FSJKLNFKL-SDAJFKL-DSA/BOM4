@@ -12,7 +12,11 @@ GameObject:
   - component: {fileID: 646862700926538292}
   - component: {fileID: 646862700926538293}
   - component: {fileID: 646862700926538294}
+<<<<<<< HEAD
+  - component: {fileID: -7935293678265002674}
+=======
   - component: {fileID: 1831393875911325065}
+>>>>>>> acb0b4f22dc19714cc9af8c5175b7628d88a7755
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -101,7 +105,11 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+<<<<<<< HEAD
+--- !u!114 &-7935293678265002674
+=======
 --- !u!114 &1831393875911325065
+>>>>>>> acb0b4f22dc19714cc9af8c5175b7628d88a7755
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -184,8 +192,8 @@ MonoBehaviour:
 
 '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 7abfb7bd39aee6b40a524754777eef9b, type: 2}
+  m_sharedMaterial: {fileID: 6175631025271805116, guid: 7abfb7bd39aee6b40a524754777eef9b, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
