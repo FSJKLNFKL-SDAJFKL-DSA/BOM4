@@ -28,13 +28,13 @@ public class PlayerBehavior : MonoBehaviour
         movementX = Input.GetAxisRaw("Horizontal");
         movementY = Input.GetAxisRaw("Vertical");
 
-        // animator stuff
         transform.position += new Vector3(movementX, 0f) * movespeed * Time.deltaTime;
         transform.position += new Vector3(0f, movementY) * movespeed * Time.deltaTime;
 
-        animator.SetFloat("Horizontal", movementX);
-        animator.SetFloat("Vertical", movementY);
-        animator.SetFloat("Speed", movement.magnitude); // <--- does not work
+        // animator stuff
+        //animator.SetFloat("Horizontal", movementX);
+        //animator.SetFloat("Vertical", movementY);
+        //animator.SetFloat("Speed", movement.magnitude); <--- does not work
     }
 
     void FixedUpdate()
