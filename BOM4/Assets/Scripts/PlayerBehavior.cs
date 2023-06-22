@@ -6,10 +6,15 @@ using UnityEngine.SceneManagement;
 
 public class PlayerBehavior : MonoBehaviour
 {
-    float movespeed;
+    public float movespeed;
     float movementX;
     float movementY;
     public float playerHealth;
+
+    // animator nesacities
+    public Rigidbody2D rb;
+    public Animator animator;
+    Vector2 movement;
 
     void Start()
     {
@@ -17,21 +22,24 @@ public class PlayerBehavior : MonoBehaviour
         movespeed = 7f;
     }
 
-    private void FixedUpdate()
-    {
-        Move();
-    }
-
-
     //movement
     void Move()
     {
         movementX = Input.GetAxisRaw("Horizontal");
         movementY = Input.GetAxisRaw("Vertical");
 
+        // animator stuff
         transform.position += new Vector3(movementX, 0f) * movespeed * Time.deltaTime;
         transform.position += new Vector3(0f, movementY) * movespeed * Time.deltaTime;
-        
+
+        animator.SetFloat("Horizontal", movementX);
+        animator.SetFloat("Vertical", movementY);
+        animator.SetFloat("Speed", movement.magnitude); // <--- does not work
+    }
+
+    void FixedUpdate()
+    {
+        Move();
     }
 
     void capSpeed()
