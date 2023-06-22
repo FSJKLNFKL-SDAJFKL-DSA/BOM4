@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Enemie
   layers:
   - Default
   - TransparentFX
@@ -38,6 +39,15 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: '[M] Floor'
+    uniqueID: 2035745639
+    locked: 0
+  - name: Player/Entety
+    uniqueID: 292967257
+    locked: 0
+  - name: '[M] Wall'
+    uniqueID: 1043227539
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0

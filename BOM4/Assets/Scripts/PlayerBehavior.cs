@@ -9,12 +9,12 @@ public class PlayerBehavior : MonoBehaviour
     float movespeed;
     float movementX;
     float movementY;
-    public float health;
+    public float playerHealth;
 
     void Start()
     {
-        health = 100;
-        movespeed = 15f;
+        playerHealth = 100;
+        movespeed = 7f;
     }
 
     private void FixedUpdate()
@@ -34,8 +34,13 @@ public class PlayerBehavior : MonoBehaviour
         
     }
 
+    void capSpeed()
+    {
+
+    }
+
     public void takeDamage(int damage)
     {
-        health -= damage;
+        playerHealth -= damage;
     }
 }
