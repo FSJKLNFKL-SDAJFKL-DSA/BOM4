@@ -10,7 +10,7 @@ public class WaveSpawner : MonoBehaviour
     public class Wave
     {
         public string name;
-        public Transform enmemy;
+        public Transform enemy;
         public int count;
         public float rate;
     }
@@ -18,7 +18,7 @@ public class WaveSpawner : MonoBehaviour
     public Wave[] waves;
     private int nextWave = 0;
 
-    public float timeBetweenWaves = 5f;
+    public float timeBetweenWaves = 15f;
     public float waveCountDown;
 
     public SpawnState state = SpawnState.counting;
@@ -34,8 +34,37 @@ public class WaveSpawner : MonoBehaviour
         {
             if (state != SpawnState.spawning)
             {
-
+                StartCoroutine(spawnWave(waves[nextWave]));
             }
         }
+        else
+        {
+            waveCountDown -= Time.deltaTime;
+        }
+    }
+
+    IEnumerator spawnWave(Wave wave)
+    {
+        Debug.Log(wave.name);
+        state = SpawnState.spawning;
+
+        foreach(Wave w in waves)
+        {
+            spawnEnemy(w.enemy);
+            yield return new WaitForSeconds(1f/wave.rate);
+        }
+
+        state = SpawnState.waiting;
+        nextWave++;
+        waveCountDown = timeBetweenWaves;
+
+        yield break;
+    }
+
+    void spawnEnemy(Transform enemy)
+    {
+        Debug.Log(enemy.name);
+        Instantiate(enemy, transform.position, transform.rotation);
+        
     }
 }

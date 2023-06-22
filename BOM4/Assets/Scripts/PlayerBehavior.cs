@@ -22,7 +22,15 @@ public class PlayerBehavior : MonoBehaviour
         movespeed = 7f;
     }
 
+<<<<<<< Updated upstream
     //movement
+=======
+    private void FixedUpdate()
+    {
+        Move();
+    }
+
+>>>>>>> Stashed changes
     void Move()
     {
         movementX = Input.GetAxisRaw("Horizontal");

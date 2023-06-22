@@ -11,11 +11,11 @@ GameObject:
   - component: {fileID: 1291138747188531585}
   - component: {fileID: 1291138747188531584}
   - component: {fileID: 1291138747188531587}
-  - component: {fileID: 1291138747188531586}
   - component: {fileID: 1301057771395955713}
+  - component: {fileID: 6960110473381822009}
   m_Layer: 0
   m_Name: Enemy (1)
-  m_TagString: Enemie
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -107,22 +107,6 @@ NavMeshAgent:
   m_BaseOffset: 0.5
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &1291138747188531586
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1291138747188531581}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6b91376f59434574d8f86e716d25afcc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemyHealth: 0
-  damageAmount: 20
-  canHitPlayer: 1
-  gm: {fileID: 0}
 --- !u!61 &1301057771395955713
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -149,3 +133,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &6960110473381822009
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1291138747188531581}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8553d1ee7d1aff458020c1441270334, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyHealth: 40
+  damageAmount: 20
+  canHitPlayer: 1

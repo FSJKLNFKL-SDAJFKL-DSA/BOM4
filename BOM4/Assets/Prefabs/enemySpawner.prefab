@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &1803136756020806027
+--- !u!1 &7901037838753231561
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,8 +8,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 3428648137629689515}
-  - component: {fileID: -354325386073799302}
+  - component: {fileID: 7901037838993117563}
+  - component: {fileID: 7901037838753231558}
   m_Layer: 0
   m_Name: enemySpawner
   m_TagString: Untagged
@@ -17,32 +17,51 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &3428648137629689515
+--- !u!4 &7901037838993117563
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1803136756020806027}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.84557337, y: 1.2584596, z: 0}
+  m_GameObject: {fileID: 7901037838753231561}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.8806801, y: 1.4498465, z: 1294.393}
   m_LocalScale: {x: 0.4, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &-354325386073799302
+--- !u!114 &7901037838753231558
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1803136756020806027}
+  m_GameObject: {fileID: 7901037838753231561}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95a5fc50136d88b459ab3d0fc6f79d45, type: 3}
+  m_Script: {fileID: 11500000, guid: 4078d68f7fe5ab048959056e5b6780de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< Updated upstream
   Spawncount: 0
   Enemie: {fileID: 1291138747188531581, guid: 456064f3970a61749876c9afe5904afd, type: 3}
   spawningTime: 0
+=======
+  waves:
+  - name: wave1
+    enemy: {fileID: 1291138747188531585, guid: 456064f3970a61749876c9afe5904afd, type: 3}
+    count: 3
+    rate: 1
+  - name: wave2
+    enemy: {fileID: 1291138747188531585, guid: 456064f3970a61749876c9afe5904afd, type: 3}
+    count: 5
+    rate: 1
+  - name: wave3
+    enemy: {fileID: 1291138747188531585, guid: 456064f3970a61749876c9afe5904afd, type: 3}
+    count: 8
+    rate: 1
+  timeBetweenWaves: 15
+  waveCountDown: 0
+  state: 2
+>>>>>>> Stashed changes
