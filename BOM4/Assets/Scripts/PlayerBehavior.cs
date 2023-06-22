@@ -21,16 +21,11 @@ public class PlayerBehavior : MonoBehaviour
         playerHealth = 100;
         movespeed = 7f;
     }
-
-<<<<<<< Updated upstream
-    //movement
-=======
     private void FixedUpdate()
     {
         Move();
     }
 
->>>>>>> Stashed changes
     void Move()
     {
         movementX = Input.GetAxisRaw("Horizontal");
@@ -43,11 +38,6 @@ public class PlayerBehavior : MonoBehaviour
         //animator.SetFloat("Horizontal", movementX);
         //animator.SetFloat("Vertical", movementY);
         //animator.SetFloat("Speed", movement.magnitude); <--- does not work
-    }
-
-    void FixedUpdate()
-    {
-        Move();
     }
 
     void capSpeed()

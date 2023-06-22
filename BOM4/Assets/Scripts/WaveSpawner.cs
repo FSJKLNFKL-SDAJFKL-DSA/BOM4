@@ -48,10 +48,10 @@ public class WaveSpawner : MonoBehaviour
         Debug.Log(wave.name);
         state = SpawnState.spawning;
 
-        foreach(Wave w in waves)
+        foreach (Wave w in waves)
         {
             spawnEnemy(w.enemy);
-            yield return new WaitForSeconds(1f/wave.rate);
+            yield return new WaitForSeconds(1f / wave.rate);
         }
 
         state = SpawnState.waiting;
@@ -64,7 +64,7 @@ public class WaveSpawner : MonoBehaviour
     void spawnEnemy(Transform enemy)
     {
         Debug.Log(enemy.name);
-        Instantiate(enemy, transform.position, transform.rotation);
-        
+        Instantiate(enemy, new Vector3(transform.position.x, transform.position.y, -1f), transform.rotation);
+
     }
 }
