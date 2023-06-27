@@ -29,7 +29,6 @@ public class GunBehavior : MonoBehaviour
     void Shoot()
     {
         var cloneBullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
-        cloneBullet.transform.Rotate(0, 0, 90);
         Destroy(cloneBullet, 1f);
     }
 
