@@ -12,9 +12,7 @@ public class PlayerBehavior : MonoBehaviour
     public float playerHealth;
 
     // animator nesacities
-    public Rigidbody2D rb;
     public Animator animator;
-    Vector2 movement;
 
     void Start()
     {
@@ -33,6 +31,25 @@ public class PlayerBehavior : MonoBehaviour
 
         transform.position += new Vector3(movementX, 0f) * movespeed * Time.deltaTime;
         transform.position += new Vector3(0f, movementY) * movespeed * Time.deltaTime;
+
+        if (movementY == 1 || movementY == -1)
+        {
+            animator.SetFloat("Vertical", movementY);
+            animator.SetBool("isMoving", true);
+        }
+        else
+        {
+            animator.SetFloat("Vertical", 0);
+        }
+        if (movementX == 1 || movementX == -1)
+        {
+            animator.SetFloat("Horizontal", movementX);
+            animator.SetBool("isMoving", true);
+        }
+        else
+        {
+            animator.SetFloat("Horizontal", 0);
+        }
 
         // animator stuff
         //animator.SetFloat("Horizontal", movementX);
