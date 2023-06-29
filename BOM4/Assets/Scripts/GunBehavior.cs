@@ -30,6 +30,7 @@ public class GunBehavior : MonoBehaviour
     {
         var cloneBullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
         Destroy(cloneBullet, 1f);
+
     }
 
     void Rotate()//
