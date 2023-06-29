@@ -171,7 +171,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movespeed: 0
   playerHealth: 0
-  animator: {fileID: 0}
+  animator: {fileID: 7430460311750545141}
 --- !u!114 &6312578792827232497
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -200,7 +200,7 @@ Animator:
   m_GameObject: {fileID: 1258260882649602693}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 5b89c90f3a5adeb40aa09dfb1b1fc486, type: 2}
+  m_Controller: {fileID: 9100000, guid: 8124d067d640f0a4db239cfad9f9a90e, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -316,6 +316,7 @@ GameObject:
   - component: {fileID: 1258260882660552527}
   - component: {fileID: 1258260882660552624}
   - component: {fileID: 1258260882660552626}
+  - component: {fileID: 4220344885376656269}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -364,7 +365,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 7
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -388,6 +389,39 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1258260882660552627}
   m_Enabled: 1
+--- !u!114 &4220344885376656269
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1258260882660552627}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_VolumeFrameworkUpdateModeOption: 2
+  m_RenderPostProcessing: 0
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_AllowXRRendering: 1
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_Version: 2
 --- !u!1 &6208876321358403740
 GameObject:
   m_ObjectHideFlags: 0

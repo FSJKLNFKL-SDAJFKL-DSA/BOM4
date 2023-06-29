@@ -40,6 +40,8 @@ public class PlayerBehavior : MonoBehaviour
         else
         {
             animator.SetFloat("Vertical", 0);
+            animator.SetBool("isMoving", false);
+
         }
         if (movementX == 1 || movementX == -1)
         {
@@ -49,17 +51,9 @@ public class PlayerBehavior : MonoBehaviour
         else
         {
             animator.SetFloat("Horizontal", 0);
+            animator.SetBool("isMoving", false);
+
         }
-
-        // animator stuff
-        //animator.SetFloat("Horizontal", movementX);
-        //animator.SetFloat("Vertical", movementY);
-        //animator.SetFloat("Speed", movement.magnitude); <--- does not work
-    }
-
-    void capSpeed()
-    {
-
     }
 
     public void takeDamage(int damage)
