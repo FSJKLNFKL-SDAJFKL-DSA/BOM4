@@ -42,6 +42,11 @@ public class PlayerBehavior : MonoBehaviour
             animator.SetFloat("Horizontal", 0);
         }
 
+        if (playerHealth <= 0)
+        {
+            SceneManager.LoadScene(2);  
+        }
+
     }
 
     void Move()
