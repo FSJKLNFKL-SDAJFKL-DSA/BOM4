@@ -22,6 +22,26 @@ public class PlayerBehavior : MonoBehaviour
     private void FixedUpdate()
     {
         Move();
+        if (movementY >= 0.1f || movementY <= -0.1f)
+        {
+            animator.SetFloat("Vertical", movementY);
+            animator.SetBool("isMoving", true);
+        }
+        else
+        {
+            animator.SetFloat("Vertical", 0);
+            animator.SetBool("isMoving", false);
+        }
+        if (movementX >= 0.1f || movementX <= -0.1f)
+        {
+            animator.SetFloat("Horizontal", movementX);
+            animator.SetBool("isMoving", true);
+        }
+        else
+        {
+            animator.SetFloat("Horizontal", 0);
+        }
+
     }
 
     void Move()
@@ -32,28 +52,6 @@ public class PlayerBehavior : MonoBehaviour
         transform.position += new Vector3(movementX, 0f) * movespeed * Time.deltaTime;
         transform.position += new Vector3(0f, movementY) * movespeed * Time.deltaTime;
 
-        if (movementY == 1 || movementY == -1)
-        {
-            animator.SetFloat("Vertical", movementY);
-            animator.SetBool("isMoving", true);
-        }
-        else
-        {
-            animator.SetFloat("Vertical", 0);
-            animator.SetBool("isMoving", false);
-
-        }
-        if (movementX == 1 || movementX == -1)
-        {
-            animator.SetFloat("Horizontal", movementX);
-            animator.SetBool("isMoving", true);
-        }
-        else
-        {
-            animator.SetFloat("Horizontal", 0);
-            animator.SetBool("isMoving", false);
-
-        }
     }
 
     public void takeDamage(int damage)
