@@ -148,3 +148,4 @@ MonoBehaviour:
   enemyHealth: 40
   damageAmount: 20
   canHitPlayer: 1
+  deathSound: {fileID: 8300000, guid: c3e5313a799a0a446b379284939fe30e, type: 3}

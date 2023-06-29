@@ -15,7 +15,7 @@ public class GunBehavior : MonoBehaviour
     private UnityEngine.Vector2 mousePosition;
     public Rigidbody2D rb;
     public GameObject bulletPrefab;
-    // Update is called once per frame
+    public AudioSource audioSource;
     void Update()
     {
         if (Input.GetButtonDown("Fire1"))
@@ -26,12 +26,15 @@ public class GunBehavior : MonoBehaviour
         rotateSprite();
     }
 
+    
+
     void Shoot()
     {
         var cloneBullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
         Destroy(cloneBullet, 1f);
-
+        audioSource.Play();
     }
+
 
     void Rotate()//
     {
