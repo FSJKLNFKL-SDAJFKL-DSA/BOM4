@@ -30,12 +30,11 @@ public class WaveSpawner : MonoBehaviour
 
     private void Update()
     {
-
         if (waveCountDown <= 0)
         {
             if (state != SpawnState.spawning)
             {
-                StartCoroutine(spawnWave(waves[nextWave]));
+                StartCoroutine(SpawnWave(waves[nextWave]));
             }
         }
         else
@@ -44,14 +43,14 @@ public class WaveSpawner : MonoBehaviour
         }
     }
 
-    IEnumerator spawnWave(Wave wave)
+    IEnumerator SpawnWave(Wave wave)
     {
         Debug.Log(wave.name);
         state = SpawnState.spawning;
 
         for (int i = 0; i < wave.count; i++)
         {
-            spawnEnemy(wave.enemy);
+            SpawnEnemy(wave.enemy);
             yield return new WaitForSeconds(1f / wave.rate);
         }
 
@@ -62,10 +61,9 @@ public class WaveSpawner : MonoBehaviour
         yield break;
     }
 
-    void spawnEnemy(Transform enemy)
+    void SpawnEnemy(Transform enemy)
     {
         Debug.Log(enemy.name);
         Instantiate(enemy, new Vector3(transform.position.x, transform.position.y, -1f), transform.rotation);
-
     }
 }
