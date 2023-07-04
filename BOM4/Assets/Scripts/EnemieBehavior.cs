@@ -11,7 +11,6 @@ public class EnemieBehavior : MonoBehaviour
     private Transform target;
     NavMeshAgent agent;
     public bool canHitPlayer = true;
-    private GameObject smobj;
     public AudioSource audioSource;
 
     void Start()
@@ -21,8 +20,7 @@ public class EnemieBehavior : MonoBehaviour
         agent.updateRotation = false;
         agent.updateUpAxis = false;
         targetGO = GameObject.Find("Player");
-        smobj = GameObject.Find("Canvas");
-        audioSource = GameObject.Find("Audio").GetComponent<AudioSource>(); 
+        audioSource = GameObject.Find("EnemyPopAudio").GetComponent<AudioSource>(); 
     }
 
     void Update()
@@ -33,6 +31,14 @@ public class EnemieBehavior : MonoBehaviour
         {
             Destroy(gameObject);
             ScoreManager.score++;
+        }
+        if (agent.velocity.x >= -0.5)
+        {
+            gameObject.transform.localScale = new Vector3(1, 1);
+        }
+        if (agent.velocity.x <= 0.5)
+        {
+            gameObject.transform.localScale = new Vector3(-1, 1);
         }
 
     }
@@ -51,8 +57,7 @@ public class EnemieBehavior : MonoBehaviour
                 Debug.Log(audioSource.isPlaying);
             }
 
-            ScoreManager sm = smobj.GetComponent<ScoreManager>();
-            sm.score++;
+            ScoreManager.score++;
             Destroy(gameObject);
         }
     }

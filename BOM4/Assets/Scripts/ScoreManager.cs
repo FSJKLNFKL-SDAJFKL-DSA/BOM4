@@ -6,7 +6,7 @@ using TMPro;
 public class ScoreManager : MonoBehaviour
 {
     public TMP_Text textScore;
-     public static int score;
+    public static int score;
 
     void Start()
     {
