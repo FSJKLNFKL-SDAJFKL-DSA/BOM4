@@ -30,8 +30,7 @@ public class EnemieBehavior : MonoBehaviour
         if (enemyHealth == 0)
         {
             Destroy(gameObject);
-            ScoreManager sm = smobj.GetComponent<ScoreManager>();
-            sm.score++;
+            ScoreManager.score++;
         }
     }
 
