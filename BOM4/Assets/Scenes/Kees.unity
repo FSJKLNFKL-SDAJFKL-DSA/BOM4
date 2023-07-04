@@ -269,7 +269,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: 112ea8f5edda01844b14f4999a0ea885, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.27626884, g: 0.8773585, b: 0.2027857, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -3445,16 +3445,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1827661684450885605, guid: 72769687cf274cb4fbaee1e0d3c25838, type: 3}
       propertyPath: m_Volume
-      value: 0.21
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 7169359944497374902, guid: 72769687cf274cb4fbaee1e0d3c25838, type: 3}
       propertyPath: m_Volume
-      value: 0.282
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 7169359944497374902, guid: 72769687cf274cb4fbaee1e0d3c25838, type: 3}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 8300000, guid: 44db1332a6ae56e46945d359a2059cb6, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 72769687cf274cb4fbaee1e0d3c25838, type: 3}
 --- !u!4 &1882760728 stripped
