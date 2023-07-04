@@ -12,6 +12,7 @@ public class EnemieBehavior : MonoBehaviour
     NavMeshAgent agent;
     public bool canHitPlayer = true;
     private GameObject smobj;
+    public AudioSource audioSource;
 
     void Start()
     {
@@ -21,6 +22,7 @@ public class EnemieBehavior : MonoBehaviour
         agent.updateUpAxis = false;
         targetGO = GameObject.Find("Player");
         smobj = GameObject.Find("Canvas");
+        audioSource = GameObject.Find("Audio").GetComponent<AudioSource>(); 
     }
 
     void Update()
@@ -32,11 +34,27 @@ public class EnemieBehavior : MonoBehaviour
             Destroy(gameObject);
             ScoreManager.score++;
         }
+
     }
+
 
     public void takeDamageEmeny(int damage)
     {
         enemyHealth -= damage;
+        if (enemyHealth == 0)
+        {
+            if (audioSource != null)
+            {
+                audioSource.volume = 1;
+                Debug.Log("started playinig");
+                audioSource.Play();
+                Debug.Log(audioSource.isPlaying);
+            }
+
+            ScoreManager sm = smobj.GetComponent<ScoreManager>();
+            sm.score++;
+            Destroy(gameObject);
+        }
     }
 
     private void OnCollisionStay2D(Collision2D collision)
