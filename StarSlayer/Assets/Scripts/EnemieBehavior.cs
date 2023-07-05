@@ -20,7 +20,7 @@ public class EnemieBehavior : MonoBehaviour
         agent.updateRotation = false;
         agent.updateUpAxis = false;
         targetGO = GameObject.Find("Player");
-        audioSource = GameObject.Find("Audio").GetComponent<AudioSource>(); 
+        audioSource = GameObject.Find("enemyAudio").GetComponent<AudioSource>(); 
     }
 
     void Update()
@@ -32,6 +32,15 @@ public class EnemieBehavior : MonoBehaviour
             Destroy(gameObject);
             ScoreManager.score++;
         }
+        if (agent.velocity.x >= -0.2)
+        {
+            gameObject.transform.localScale = new Vector3(1, 0.9343013f);
+        }
+        if (agent.velocity.x <= 0.2)
+        {
+            gameObject.transform.localScale = new Vector3(-1, 0.9343013f);
+        }
+
 
     }
 
@@ -44,9 +53,7 @@ public class EnemieBehavior : MonoBehaviour
             if (audioSource != null)
             {
                 audioSource.volume = 1;
-                Debug.Log("started playinig");
                 audioSource.Play();
-                Debug.Log(audioSource.isPlaying);
             }
 
             ScoreManager.score++;

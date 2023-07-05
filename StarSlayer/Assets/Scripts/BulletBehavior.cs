@@ -26,5 +26,6 @@ public class BulletBehavior : MonoBehaviour
             eb.takeDamageEmeny(20);
             Destroy(gameObject);
         }
+
     }
 }

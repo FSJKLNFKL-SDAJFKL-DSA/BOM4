@@ -5,6 +5,7 @@ using UnityEngine;
 public class WaveSpawner : MonoBehaviour
 {
     public enum SpawnState { spawning, waiting, counting };
+    private bool firstRound;
 
     [System.Serializable]
     public class Wave
@@ -26,12 +27,14 @@ public class WaveSpawner : MonoBehaviour
     private void Start()
     {
         waveCountDown = timeBetweenWaves;
+        firstRound = true;
     }
 
     private void Update()
     {
-        if (waveCountDown <= 0)
+        if (waveCountDown <= 0 || firstRound == true)
         {
+            firstRound = false;
             if (state != SpawnState.spawning)
             {
                 StartCoroutine(SpawnWave(waves[nextWave]));
