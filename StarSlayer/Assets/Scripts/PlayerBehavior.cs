@@ -49,6 +49,18 @@ public class PlayerBehavior : MonoBehaviour
 
     }
 
+<<<<<<< Updated upstream:StarSlayer/Assets/Scripts/PlayerBehavior.cs
+=======
+<<<<<<< Updated upstream
+    //movement
+=======
+    private void FixedUpdate()
+    {
+        Move();
+    }
+
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes:BOM4/Assets/Scripts/PlayerBehavior.cs
     void Move()
     {
         movementX = Input.GetAxisRaw("Horizontal");

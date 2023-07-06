@@ -8,6 +8,7 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< Updated upstream:StarSlayer/Assets/Prefabs/Bullet.prefab
   - component: {fileID: 2092843793614438320}
   - component: {fileID: 8200459662027571394}
   - component: {fileID: 85418923123727183}
@@ -16,6 +17,16 @@ GameObject:
   m_Layer: 0
   m_Name: Bullet
   m_TagString: Untagged
+=======
+  - component: {fileID: 1291138747188531585}
+  - component: {fileID: 1291138747188531584}
+  - component: {fileID: 1291138747188531587}
+  - component: {fileID: 1301057771395955713}
+  - component: {fileID: 6960110473381822009}
+  m_Layer: 0
+  m_Name: Enemy (1)
+  m_TagString: Enemy
+>>>>>>> Stashed changes:BOM4/Assets/Prefabs/Enemy (1).prefab
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -92,6 +103,7 @@ Rigidbody2D:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream:StarSlayer/Assets/Prefabs/Bullet.prefab
   m_GameObject: {fileID: 5500782772535758010}
   m_BodyType: 0
   m_Simulated: 1
@@ -107,6 +119,25 @@ Rigidbody2D:
   m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!61 &7563211146797030264
+=======
+  m_GameObject: {fileID: 1291138747188531581}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 1
+  m_BaseOffset: 0.5
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
+--- !u!61 &1301057771395955713
+>>>>>>> Stashed changes:BOM4/Assets/Prefabs/Enemy (1).prefab
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -132,12 +163,17 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.4370149, y: 0.44674703}
   m_EdgeRadius: 0
+<<<<<<< Updated upstream:StarSlayer/Assets/Prefabs/Bullet.prefab
 --- !u!114 &8261051991660130931
+=======
+--- !u!114 &6960110473381822009
+>>>>>>> Stashed changes:BOM4/Assets/Prefabs/Enemy (1).prefab
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream:StarSlayer/Assets/Prefabs/Bullet.prefab
   m_GameObject: {fileID: 5500782772535758010}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -147,3 +183,14 @@ MonoBehaviour:
   speed: 40
   rb: {fileID: 85418923123727183}
   player: {fileID: 3318267434237727453, guid: 59fa6105fc001fb4f93c164392a5ac59, type: 3}
+=======
+  m_GameObject: {fileID: 1291138747188531581}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8553d1ee7d1aff458020c1441270334, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyHealth: 40
+  damageAmount: 20
+  canHitPlayer: 1
+>>>>>>> Stashed changes:BOM4/Assets/Prefabs/Enemy (1).prefab

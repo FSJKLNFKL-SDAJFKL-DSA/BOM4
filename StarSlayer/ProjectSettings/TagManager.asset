@@ -5,7 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - Enemy
+<<<<<<< Updated upstream:StarSlayer/ProjectSettings/TagManager.asset
   - Border
+=======
+>>>>>>> Stashed changes:BOM4/ProjectSettings/TagManager.asset
   layers:
   - Default
   - TransparentFX
